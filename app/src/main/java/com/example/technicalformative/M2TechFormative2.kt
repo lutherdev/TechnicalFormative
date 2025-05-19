@@ -13,6 +13,9 @@ Each class must have its corresponding functions to set or get the information.
 Your program must have a menu to ask the user what kind of information to input. Display all information after inputting all data.
  */
 
+open class Person (val firstName: String, val middleName: String, val lastName: String, val bDate: String, val address: String){
+
+}
 
 
 fun main(){

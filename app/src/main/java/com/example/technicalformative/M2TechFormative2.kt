@@ -13,8 +13,39 @@ Each class must have its corresponding functions to set or get the information.
 Your program must have a menu to ask the user what kind of information to input. Display all information after inputting all data.
  */
 
-open class Person (val firstName: String, val middleName: String, val lastName: String, val bDate: String, val address: String){
 
+
+open class Person (val firstName: String, val middleName: String, val lastName: String, val bDate: String, val gender: String, val address: String){
+
+    open fun displayPerson(){
+        println("Name: ")
+        println("Birthdate: ")
+        println("Gender: ")
+        println("Address: ")
+    }
+}
+
+class Employee (firstName: String, middleName: String, lastName: String, birthday: String, gender: String, address: String, val tin: String, val sss: String, val philhealth: String, val schoolGraduatedFrom: String, val yearGraduated: Int, val knowledgeSkills: List<String>, val personalReferences: List<Pair<String, String>>) : Person(firstName, middleName, lastName, birthday, gender, address){
+    override fun displayPerson() {
+        super.displayPerson()
+        println("tin: ")
+        println("SSS: ")
+        println("Philhealth: ")
+        println("School Graduated from: ")
+        println("Year Graduated: ")
+        println("Knowledge/Skills: ")
+        println("Personal References: ")
+    }
+}
+
+class Student(firstName: String, middleName: String, lastName: String, birthday: String, gender: String, address: String, val degree: String, val yearLevel: String, val specialization:String, val section: String) : Person(firstName, middleName, lastName, birthday, gender, address){
+    override fun displayPerson() {
+        super.displayPerson()
+        println("Degree: ")
+        println("Year Level: ")
+        println("Specialization: ")
+        println("Section: ")
+    }
 }
 
 
